@@ -1,3 +1,8 @@
+/*  TEST STYLING */
+.test {
+    border: 5px solid red;
+}
+
 /*  NAVIGATION BAR */
 
 #nav-bar {
@@ -15,6 +20,13 @@
 }
 
 
+/*  MAIN CONTENT */
+
 #main-content {
     margin-top: 10%;
+}
+
+
+input {
+    width: 50px;
 }

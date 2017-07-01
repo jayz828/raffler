@@ -24,7 +24,80 @@ function raffleStart() {
     }
 
     console.log(results);
+    randomizerDisplay(results);
 };
 
 
 })();
+
+function randomizerDisplay(results) {
+        var numAssoc = document.getElementById("associates").value;
+        var raffle1 = document.getElementById("raffle-1");
+        var raffleNumbers = document.querySelectorAll(".raffle-numbers");
+        var i = 0;
+
+
+        var randomizer = setInterval(function() {
+
+
+
+            var randomNumbers = Math.floor(Math.random() * numAssoc) + 1;
+
+            raffleNumbers.forEach(function(number) {
+                number.innerHTML = Math.floor(Math.random() * numAssoc) + 1;
+            });
+
+            
+
+            // raffleNumbers[0].innerHTML = randomNumbers + 1;
+            // raffleNumbers[1].innerHTML = randomNumbers + 10;
+            // raffleNumbers[2].innerHTML = randomNumbers + 3;
+            // raffleNumbers[3].innerHTML = randomNumbers + 9;
+            // raffleNumbers[4].innerHTML = randomNumbers + 12;
+            // raffleNumbers[5].innerHTML = randomNumbers + 13;
+
+
+
+
+
+            // if (i == numAssoc) {
+            //     console.log('should stop');
+            //     clearInterval(randomizer); 
+            // } else {
+            //     i++;
+            // }      
+        var timer = setTimeout(function() {
+
+            clearInterval(randomizer);
+
+
+            var i = 0
+            raffleNumbers.forEach(function(numbers){
+                numbers.innerHTML = results[i];
+                i++;
+            });
+
+
+
+
+
+            // console.log(results[0]);
+        }, 1000);       
+
+        }, 60);
+
+
+
+        // for (var i = 0; i < numAssoc; i++) { 
+
+        //     setTimeout(changeValue(), 1000);
+
+
+        
+    
+        // }
+
+
+
+
+}
