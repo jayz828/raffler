@@ -9,9 +9,15 @@
 function raffleStart() {
     var numAssoc = document.getElementById("associates").value;
     var numRaffle = document.getElementById("raffle").value;
+    
+      var results = [];
 
-    var results = [];
+    if (isNaN(numAssoc) == true) {
+        alert('Please enter a number')
+    } else {
 
+
+        
     
     for (var i = 0; i < numRaffle; i++) { 
         
@@ -25,6 +31,11 @@ function raffleStart() {
 
     console.log(results);
     randomizerDisplay(results);
+        
+    }
+
+  
+
 };
 
 
